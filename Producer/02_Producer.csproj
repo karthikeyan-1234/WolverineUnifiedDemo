@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<!-- Entity Framework Core & SQL Server Provider -->
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.10" />
+		<!-- EF Core Design package for migrations and tooling -->
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.10">
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.10">
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+			<Publish>true</Publish>
+		</PackageReference>
+
+		<!-- Wolverine Core, SQL Server Outbox/Inbox Store, and EF Core Middleware -->
+		<PackageReference Include="WolverineFx.SqlServer" Version="6.20.0" />
+		<PackageReference Include="WolverineFx.EntityFrameworkCore" Version="6.20.0" />
+		<PackageReference Include="WolverineFx.RuntimeCompilation" Version="6.20.0" />
+		<!-- Add this -->
+
+		<!--Add Swagger-->
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+
+
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Shared\Shared.csproj" />
+	</ItemGroup>
+
+</Project>

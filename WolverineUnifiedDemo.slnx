@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Consumer/03_Consumer.csproj" />
+  <Project Path="Host/01_Host.csproj" />
+  <Project Path="Producer/02_Producer.csproj" />
+  <Project Path="Shared/Shared.csproj" />
+</Solution>
