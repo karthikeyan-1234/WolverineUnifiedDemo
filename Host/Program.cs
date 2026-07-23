@@ -69,6 +69,11 @@ builder.UseWolverine(opts =>
     opts.ListenToSqlServerQueue("lead-processing-queue")
         .UseDurableInbox(); // MANDATORY: Enforces exactly-once processing
 
+
+    // 5. Forces Wolverine to split multiple handlers for the same event 
+    // into independent execution pipelines and message subscriptions.
+    opts.MultipleHandlerBehavior = MultipleHandlerBehavior.Separated;
+
     // Future Kafka Swap: 
     // opts.ListenToKafkaTopic("leads.created").UseDurableInbox();
 });
